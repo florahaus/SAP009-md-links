@@ -8,5 +8,33 @@
     "createdAt": "2023-03-30T13:20:37.337Z",
     "version": "5.6.0",
     "commit": "ffa75c8b2bede153844195479abeff01f3e34227"
+  },
+  "description": "* [1. Prefácio](#1-prefácio)\r * [2. Resumo do projeto](#2-resumo-do-projeto)\r * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)\r * [4. Considerações gerais](#4-considerações-gerais)\r * [5. Critérios de aceitação mínimos do projeto](#5-criterios-de-aceitação-mínimos-do-projeto)\r * [6. Entregáveis](#6-entregáveis)\r * [7. Hacker edition](#7-hacker-edition)\r * [8. Guias, dicas e leituras complementares](#8-guias-dicas-e-leituras-complementares)\r * [9. Checklist](#9-checklist)\r * [10. Dividindo o problema - babies steps](#10-dividindo-o-problema)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint ."
+  },
+  "author": "florahaus",
+  "license": "MIT",
+  "bin": {
+    "mdLinks": "cli.js"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "chalk": "^5.2.0",
+    "fetch": "^1.1.0",
+    "jest": "^29.5.0",
+    "node": "^20.2.0",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
   }
 }
