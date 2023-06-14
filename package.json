@@ -14,27 +14,28 @@
   "directories": {
     "test": "test"
   },
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "npx eslint ."
   },
   "author": "florahaus",
   "license": "MIT",
   "bin": {
-    "mdLinks": "cli.js"
+    "mdLinks": "./src/cli.js"
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@babel/preset-env": "^7.22.5",
     "chalk": "^5.2.0",
     "fetch": "^1.1.0",
-    "jest": "^29.5.0",
     "node": "^20.2.0",
     "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "eslint": "^8.42.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "eslint-plugin-import": "^2.27.5",
+    "jest": "^29.5.0"
   }
 }
