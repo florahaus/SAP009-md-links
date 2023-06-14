@@ -1,4 +1,5 @@
 import fs from 'fs';
+import chalk from 'chalk';
 
 function extrairLinks(resultado, caminhoDoArquivo){
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
@@ -34,15 +35,15 @@ const promessasValidacao = links.map(async(link) => {
   return fetch(link.href)
   .then((response) => {
     link.status = response.status;
-    link.ok = 'ok';
+    link.ok = chalk.green('OK');
     if(link.status >= 400){
-      link.ok = 'fail';
+      link.ok = chalk.red('fail');
     }
     return link;
   })
   .catch((erro) => {
-    link.status = 'erro';
-    link.ok = 'fail';
+    link.status = chalk.red('erro');
+    link.ok = chalk.red('fail');
     return link;
   })
   })
@@ -52,4 +53,4 @@ const promessasValidacao = links.map(async(link) => {
   })
 } 
 
-export { mdLinks, extrairLinks };
+export { mdLinks, extrairLinks, };

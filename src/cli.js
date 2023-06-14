@@ -1,9 +1,10 @@
 #! /usr/bin/env node
-// import chalk from 'chalk';
+import chalk from 'chalk';
 import { mdLinks } from './index.js';
 
 const caminho = process.argv[2];
 const valida = process.argv.includes('--validate');
+let icon;
 
 
 mdLinks(caminho, valida)
